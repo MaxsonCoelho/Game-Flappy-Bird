@@ -1,6 +1,6 @@
 extends Node2D
 
-export var vel = -150
+export var vel = -400
 
 func _ready():
 	set_process(true)
