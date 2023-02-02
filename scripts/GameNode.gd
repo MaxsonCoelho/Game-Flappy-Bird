@@ -18,10 +18,12 @@ func kill():
 	get_node("BackAnimation").stop()
 	estado = PERDENDO
 	time_replay.start()
+	get_node("SomHit").play()
 	
 func pontuar():
 	pontos += 1
 	label.set_text(str(pontos))
+	get_node("SomScore").play()
 
 func _on_TimerToReplay_timeout():
 	get_tree().reload_current_scene()
