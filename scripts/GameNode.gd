@@ -2,6 +2,7 @@ extends Node2D
 
 onready var felpudo = get_node("Felpudo")
 onready var time_replay = get_node("TimerToReplay")
+onready var label = get_node("Node2D/Control/Label")
 
 var pontos = 0
 var estado = 1
@@ -17,7 +18,10 @@ func kill():
 	get_node("BackAnimation").stop()
 	estado = PERDENDO
 	time_replay.start()
-
+	
+func pontuar():
+	pontos += 1
+	label.set_text(str(pontos))
 
 func _on_TimerToReplay_timeout():
 	get_tree().reload_current_scene()

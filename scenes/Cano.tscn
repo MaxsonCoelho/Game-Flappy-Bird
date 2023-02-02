@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Cano.gd" type="Script" id=1]
 [ext_resource path="res://assets/cano.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 85.25, 887.766 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( -1, -432 )
+b = Vector2( -1, 450 )
 
 [node name="Cano" type="Node2D"]
 script = ExtResource( 1 )
@@ -30,4 +34,11 @@ shape = SubResource( 1 )
 position = Vector2( -9, -1106.47 )
 shape = SubResource( 1 )
 
+[node name="Ponto" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ponto"]
+position = Vector2( 377, -1 )
+shape = SubResource( 2 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Ponto" to="." method="_on_Ponto_body_entered"]
