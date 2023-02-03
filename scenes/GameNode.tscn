@@ -92,7 +92,7 @@ a = Vector2( -4, -1 )
 b = Vector2( 1000, 0 )
 
 [sub_resource type="DynamicFont" id=7]
-size = 100
+size = 90
 use_filter = true
 font_data = ExtResource( 12 )
 
@@ -129,7 +129,7 @@ script = ExtResource( 7 )
 position = Vector2( -1.99998, 3.00012 )
 scale = Vector2( 1.4, 1.4 )
 frames = SubResource( 1 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Felpudo"]
@@ -178,10 +178,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Label" type="Label" parent="Node2D/Control"]
-margin_left = -19.0
-margin_top = 91.0
-margin_right = 326.0
-margin_bottom = 211.0
+margin_left = 204.0
+margin_top = 52.0
+margin_right = 404.0
+margin_bottom = 172.0
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = SubResource( 7 )
 text = "0"
